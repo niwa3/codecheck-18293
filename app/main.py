@@ -38,8 +38,15 @@ def main(argv):
         if v.isdigit() is False:
             print(-1)
             return 0
-    print(argv)
     a = argv[0]
     b = argv[1]
     m = argv[2]
-    print(a, b, m)
+    i = 0
+    n = 0
+    num = 0
+    while(i != m):
+        num = a * n + b
+        if is_prime(num) is True:
+            i += 1
+        n += 1
+    print(num)
