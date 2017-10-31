@@ -38,15 +38,19 @@ def main(argv):
         if v.isdigit() is False:
             print(-1)
             return 0
-    a = argv[0]
-    b = argv[1]
-    m = argv[2]
+    a = int(argv[0])
+    b = int(argv[1])
+    m = int(argv[2])
     i = 0
-    n = 0
+    n = 1
     num = 0
-    while(i != m):
+    while(i < m):
         num = a * n + b
         if is_prime(num) is True:
             i += 1
         n += 1
     print(num)
+
+
+if __name__ == "__main__":
+    main(["29", "47", "239"])
