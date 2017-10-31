@@ -27,9 +27,15 @@ def is_prime(q, k=50):
 
 
 def gcd(a, b):
-    while b:
-        a, b = b, a % b
-        return a
+    # aとbが互いに素であるか確かめる
+    if a > b:
+        while b > 0:
+            a, b = b, a % b
+            return a
+    else:
+        while a > 0:
+            b, a = a, b % a
+            return b
 
 
 def main(argv):
